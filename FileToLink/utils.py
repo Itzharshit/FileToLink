@@ -22,7 +22,7 @@ async def participant(user_id: int):
         return True
 
 
-def progress_bar(current, total, length=16, finished='█', unfinished='░'):
+def progress_bar(current, total, length=16, finished='⬢', unfinished='⬡'):
     rate = current / total
     finished_len = int(length * rate) if rate <= 1 else length
     return f'{finished * finished_len}{unfinished * (length - finished_len)} {int(rate * 100)}%'
